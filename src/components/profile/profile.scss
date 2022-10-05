@@ -1,0 +1,46 @@
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .profileContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 550px;
+        height: 400px;
+
+        .imgContainer {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 5px solid white;
+
+            img {
+                width: 250px;
+                height: 250px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        .textContainer{
+            height: 130px;
+            display: flex;
+            color: wheat;
+            flex-direction: column;
+            align-items: center;
+            
+            h1{
+                font-size: 48px;
+            }
+
+            span{
+                font-size: 23px;
+                margin-top: 20px;
+                font-weight: 300
+            }
+        }
+    }
+}
