@@ -1,3 +1,4 @@
+import { KeyboardDoubleArrowDown } from "@mui/icons-material";
 import "./profile.scss";
 
 export default function Profile() {
@@ -12,6 +13,9 @@ export default function Profile() {
                 <span>and I am a front-end developer</span>
             </div>
         </div>
+        <a href="">
+          <KeyboardDoubleArrowDown className='icon' />
+        </a>
     </div>
   )
 }

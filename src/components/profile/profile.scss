@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .profile {
     display: flex;
     align-items: center;
@@ -25,21 +27,103 @@
             }
         }
 
-        .textContainer{
+        .textContainer {
             height: 130px;
             display: flex;
-            color: wheat;
+            color: #FFFFFF;
+            text-shadow: 0 0 5px #000000,
+                0 0 10px #000000,
+                0 0 15px #000000,
+                0 0 20px #000000,
+                0 0 30px #000000,
+                0 0 40px #000000,
+                0 0 55px #000000,
+                0 0 75px #000000,
+                0 0 85px #000000,
+                0 0 95px #000000;
             flex-direction: column;
             align-items: center;
-            
-            h1{
+            cursor: default;
+
+            h1 {
                 font-size: 48px;
             }
 
-            span{
+            span {
                 font-size: 23px;
                 margin-top: 20px;
-                font-weight: 300
+                font-weight: 400;
+            }
+
+            @include tablet {
+                text-align: center;
+                text-shadow: 0 0 5px #000000,
+                    0 0 10px #000000,
+                    0 0 15px #000000,
+                    0 0 20px #000000,
+                    0 0 30px #000000,
+                    0 0 40px #000000;
+
+                h1 {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+
+    a {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 15px;
+        left: calc(50% - 22px);
+        width: 40px;
+        height: 50px;
+        border-radius: 5px;
+        overflow: hidden;
+        color: #FFFFFF;
+
+        @include mobile {
+            left: calc(50% - 45px);
+        }
+
+        .icon {
+            color: #FFFFFF;
+            font-size: 50px;
+            animation: arrowBlink 2s infinite;
+            filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
+
+            &:hover {
+                animation: none;
+            }
+        }
+
+        @keyframes arrowBlink {
+            100% {
+                opacity: 0.3;
+            }
+        }
+    }
+}
+
+@include mobileTurned {
+    .profile {
+        position: relative;
+
+        .profileContainer {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            flex-direction: row;
+            align-items: flex-start;
+
+            .textContainer{
+                margin-top: 20px;
+
+                h1{
+                    font-size: 40px;
+                }
             }
         }
     }

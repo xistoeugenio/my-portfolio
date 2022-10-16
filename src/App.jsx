@@ -1,11 +1,13 @@
 import './app.scss';
+import Navbar from './components/navbar/Navbar';
 import Profile from './components/profile/Profile';
+import Sidebar from './components/sidebar/Sidebar';
 
 export default function App() {
   return (
     <div className="App">
-      <div className="topbar">jkhskgh</div>
-      <div className="sidebar">dhdhgffbfg</div>
+      <Navbar />
+      <Sidebar />
       <section className='sections'>
         <div className="section">
           <Profile />
