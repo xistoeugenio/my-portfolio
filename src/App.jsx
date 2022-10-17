@@ -1,5 +1,6 @@
 import './app.scss';
 import Navbar from './components/navbar/Navbar';
+import Portfolio from './components/portfolio/Portfolio';
 import Profile from './components/profile/Profile';
 import Sidebar from './components/sidebar/Sidebar';
 
@@ -12,18 +13,16 @@ export default function App() {
         <div className="section">
           <Profile />
         </div>
-        <div className='section pink'>
+        <div className="section">
+          < Portfolio />
+        </div>
+        <div className='section yellow'>
           <div className="content">
             nfdjngklsh
           </div>
         </div>
-        <div className='section yellow'>
-        <div className="content">
-            nfdjngklsh
-          </div>
-        </div>
         <div className='section blue'>
-        <div className="content">
+          <div className="content">
             nfdjngklsh
           </div>
         </div>

@@ -9,10 +9,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    /**/
     overflow: hidden;
-
+    
     .sections {
         width: 100vw;
         height: 100vh;
@@ -44,8 +42,8 @@
                 left: 80px;
 
                 @include mobile{
-                    width: calc(100% - 45px);
-                    left: 45px;
+                    width: calc(100% );
+                    left: 0;
                 }
             }
 

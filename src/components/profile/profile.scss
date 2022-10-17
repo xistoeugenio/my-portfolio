@@ -84,10 +84,6 @@
         overflow: hidden;
         color: #FFFFFF;
 
-        @include mobile {
-            left: calc(50% - 45px);
-        }
-
         .icon {
             color: #FFFFFF;
             font-size: 50px;

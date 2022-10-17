@@ -9,54 +9,67 @@
     position: fixed;
     left: 30px;
     z-index: 1;
-    
-    @include tablet{
+
+    @include tablet {
         left: 5px;
     }
-    
-    @include mobileTurned{
+
+    @include mobileTurned {
         left: 5px;
     }
 
 
-    .list{
+    .list {
         display: flex;
         flex-direction: column;
         gap: 25px;
         list-style: none;
 
-        .itemList{
+        .itemList {
             height: 50px;
-            
-            .icon{
+
+            .icon {
                 color: rgb(255, 255, 255);
                 font-size: 50px;
                 filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
                 cursor: pointer;
 
-                &:hover{
+                &:hover {
                     color: aqua;
                     filter: drop-shadow(1px 1px 4px rgb(199, 178, 178));
                 }
 
-                @include mobileTurned{
+                @include mobileTurned {
                     color: aqua;
                 }
             }
         }
     }
+
+    &.row {
+        height: 100%;
+        width: 200px;
+        position: initial;
+
+        .list {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0;
+        }
+    }
 }
 
-@include mobile{
-    .sidebar{
-        width: 40px;
+@include mobile {
+    .sidebar {
+        display: none;
 
-        .list{
+        .list {
 
-            .itemList{
+            .itemList {
                 height: 40px;
 
-                .icon{
+                .icon {
                     font-size: 40px;
                     color: aqua;
                 }

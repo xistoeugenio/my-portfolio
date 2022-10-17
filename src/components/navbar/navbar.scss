@@ -11,6 +11,24 @@
     z-index: 3;
     color: white;
 
+    .row {
+        display: none;
+
+        @include mobile {
+            display: flex;
+
+        }
+
+
+    }
+
+    h3 {
+
+        @include mobile {
+            display: none;
+        }
+    }
+
     nav {
 
         a {
@@ -36,20 +54,7 @@
 
         }
 
-        @include mobileTurned {
-            a {
-                color: #000000;
-                background-color: aqua;
-                padding: 5px;
-                text-shadow: none;
-                border-radius: 5px;
 
-                &:hover {
-                    color: black;
-                }
-            }
-
-        }
     }
 
     button {
@@ -70,9 +75,14 @@
         margin-right: 20px;
 
         svg {
+            font-size: 38px;
 
             &:hover {
                 filter: drop-shadow(2px 2px 5px rgb(255, 255, 255));
+            }
+
+            @include mobile {
+                color: aqua;
             }
         }
     }
@@ -132,6 +142,21 @@
 
         h3 {
             visibility: hidden;
+        }
+
+        nav {
+
+            a {
+                color: #000000;
+                background-color: aqua;
+                padding: 5px;
+                text-shadow: none;
+                border-radius: 5px;
+
+                &:hover {
+                    color: black;
+                }
+            }
         }
     }
 }

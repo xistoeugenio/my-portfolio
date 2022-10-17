@@ -1,9 +1,9 @@
 import {GitHub, Email, LinkedIn, Instagram} from "@mui/icons-material"
 import "./sidebar.scss"
 
-export default function Sidebar() {
+export default function Sidebar({row}) {
   return (
-    <div className="sidebar">
+    <div className={row ? "sidebar row": "sidebar"}>
       <ul className="list">
         <li className="itemList">
           <GitHub className="icon"/>
