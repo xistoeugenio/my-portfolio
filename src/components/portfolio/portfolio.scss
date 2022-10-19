@@ -53,6 +53,12 @@
                 cursor: pointer;
                 -webkit-box-shadow: rgb(0, 0, 0) 5px 5px 5px 0px, rgb(0, 0, 0) 4px 4px 15px 0px inset, 5px 5px 15px 5px rgba(0, 0, 0, 0);
                 box-shadow: rgb(0, 0, 0) 5px 5px 5px 0px, rgb(0, 0, 0) 4px 4px 15px 0px inset, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+
+                &:hover {
+                    color: black;
+                    -webkit-box-shadow: rgb(0, 0, 0)x 5px 5px 0px, rgb(152, 194, 219) 4px 4px 15px 0px inset, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+                    box-shadow: rgb(0, 0, 0) 5px 5px 5px 0px, rgb(152, 194, 219) 4px 4px 15px 0px inset, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+                }
             }
         }
 
@@ -74,7 +80,6 @@
             }
 
             .item {
-                //background-color: dodgerblue;
                 position: relative;
                 width: 200px;
                 height: 150px;
@@ -97,10 +102,11 @@
                     align-items: center;
                     justify-content: space-around;
                     transition: all 0.5s ease;
-                    cursor: pointer;
+                    cursor: default;
                     z-index: -1;
 
                     h3 {
+                        color: #7e6fd4;
                         text-align: center;
                     }
 
@@ -117,9 +123,46 @@
                             justify-content: center;
                             align-items: center;
 
+                            /*this basically create a tooltip*/
+                            &.github {
+
+                                &:hover {
+                                    &::after {
+                                        content: "source code";
+                                    }
+                                }
+
+                            }
+
+                            &:hover {
+
+                                &::after {
+                                    color: white;
+                                    content: "preview";
+                                    width: 90px;
+                                    padding: 3px;
+                                    text-align: center;
+                                    border-radius: 5px;
+                                    background-color: black;
+                                    position: absolute;
+                                    bottom: 60px;
+                                    left: 50px;
+                                    z-index: 999;
+                                }
+
+                            }
+
+                            /*end of tooltip*/
+
+
                             .icon {
                                 font-size: 40px;
                                 color: rgb(255, 255, 255);
+
+                                &:hover {
+                                    color: aqua;
+                                    filter: drop-shadow(1px 1px 4px rgb(199, 178, 178));
+                                }
                             }
                         }
                     }
@@ -148,17 +191,34 @@
                 }
 
                 &.empty {
+                    overflow: hidden;
+                    cursor: default;
                     background: -moz-linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
                     background: -webkit-linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
                     background: linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
 
-                    h3{
+                    h3 {
                         width: 250px;
+                        padding: 8px 0;
+                        text-align: center;
                         background-color: #175c86;
                         transform-origin: left;
-                        transform: rotate(33deg);
+                        transform: rotate(35.7deg) translateY(-13px) translateX(-10px);
+                        background: #7366CE;
+                        background: -moz-linear-gradient(top, #7366CE 0%, #443AA4 55%, #2B1DC5 100%);
+                        background: -webkit-linear-gradient(top, #7366CE 0%, #443AA4 55%, #2B1DC5 100%);
+                        background: linear-gradient(to bottom, #7366CE 0%, #443AA4 55%, #2B1DC5 100%);
                     }
+
+                    &:hover {
+                        -webkit-box-shadow: 0px 0px 3px 3px #FFFFFF;
+                        box-shadow: 0px 0px 3px 3px #ffffff;
+
+
+                    }
+
                 }
+
 
 
             }

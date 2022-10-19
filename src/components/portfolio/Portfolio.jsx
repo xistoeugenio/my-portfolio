@@ -55,10 +55,10 @@ export default function Portfolio() {
 
                                 <h3>{d.title}</h3>
                                 <nav>
-                                    <a href="/">
+                                    <a href="/" className="github">
                                         <GitHub className="icon" />
                                     </a>
-                                    <a href="/" >
+                                    <a href="/" className="preview">
                                         <Visibility className="icon" />
                                     </a>
                                 </nav>
