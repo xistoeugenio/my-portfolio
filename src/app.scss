@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    
+
     .sections {
         width: 100vw;
         height: 100vh;
@@ -41,10 +41,16 @@
                 bottom: 0;
                 left: 80px;
 
-                @include mobile{
-                    width: calc(100% );
+                @include tablet {
+                    width: calc(100% - 120px);
+                    left: 60px;
+                }
+
+                @include mobile {
+                    width: 100%;
                     left: 0;
                 }
+
             }
 
             &.pink {

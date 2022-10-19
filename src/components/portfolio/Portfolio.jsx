@@ -1,4 +1,5 @@
 import "./portfolio.scss";
+import { Visibility, GitHub } from "@mui/icons-material";
 import { projects, list } from "../../data/dataPortfolio";
 import { useEffect, useState } from "react";
 
@@ -50,19 +51,28 @@ export default function Portfolio() {
                                 src={d.img}
                                 alt=""
                             />
-                            <h3>{d.title}</h3>
+                            <div className="info">
+
+                                <h3>{d.title}</h3>
+                                <nav>
+                                    <a href="/">
+                                        <GitHub className="icon" />
+                                    </a>
+                                    <a href="/" >
+                                        <Visibility className="icon" />
+                                    </a>
+                                </nav>
+
+                            </div>
                         </div>
                     ))}
-                    <div className="item">
+                    <div className="item empty">
                         <h3>coming soon...</h3>
                     </div>
-                    <div className="item">
+                    <div className="item empty">
                         <h3>coming soon...</h3>
                     </div>
-                    <div className="item">
-                        <h3>coming soon...</h3>
-                    </div>
-                    <div className="item">
+                    <div className="item empty">
                         <h3>coming soon...</h3>
                     </div>
                 </div>

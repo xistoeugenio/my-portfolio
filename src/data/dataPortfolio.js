@@ -8,16 +8,12 @@ export const list = [
         title: "MERN",
     },
     {
-        id: "mobile",
-        title: "Mobile",
+        id: "react",
+        title: "react",
     },
     {
         id: "design",
         title: "Design",
-    },
-    {
-        id: "content",
-        title: "Content",
     },
 ];
 
@@ -32,7 +28,12 @@ export const projects = {
         {
             id: 2,
             title: "Mobile Rampa UI Design",
-            img: "https://cdn.dribbble.com/users/5920881/screenshots/15463142/media/b5a460223798bd85d835710806e2f3dd.png?compress=1&resize=1200x900",
+            img: "https://cdn.dribbble.com/users/2597268/screenshots/15468893/media/44313553d73ba41580f1df69749bba28.jpg?compress=1&resize=1200x900",
+        },
+        {
+            id: 2,
+            title: "Mobile Rampa UI Design",
+            img: "https://cdn.dribbble.com/users/2597268/screenshots/15468893/media/44313553d73ba41580f1df69749bba28.jpg?compress=1&resize=1200x900",
         },
     ],
     MERN: [
