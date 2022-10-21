@@ -1,34 +1,26 @@
 import "./portfolio.scss";
 import { Visibility, GitHub } from "@mui/icons-material";
-import { projects, list } from "../../data/dataPortfolio";
+import { projects, list, fullData, renderItemEmpty } from "../../data/dataPortfolio";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Portfolio() {
     const [selected, setSelected] = useState("all")
     const [data, setData] = useState([])
 
-    /*
-    useEffect(() => {
-        
-        for (let item in projects) {
-            var fullData = []
-            projects[item].map(i => fullData = [...fullData, { i }])
-        }
-        setData(fullData)
-    }, [])
-*/
-    /*teste */
     useEffect(() => {
         switch (selected) {
             case "MERN":
                 setData(projects.MERN);
                 break
+            case "react":
+                setData(projects.react);
+                break
             default:
-                setData(projects.all)
+                setData(fullData)
         }
-    }, [selected, data])
 
-
+    }, [selected])
 
     return (
         <div className="portfolio">
@@ -46,7 +38,7 @@ export default function Portfolio() {
                 </ul>
                 <div className="container">
                     {data.map(d => (
-                        <div className='item'>
+                        <div className='item' key={d.id}>
                             <img
                                 src={d.img}
                                 alt=""
@@ -55,26 +47,18 @@ export default function Portfolio() {
 
                                 <h3>{d.title}</h3>
                                 <nav>
-                                    <a href="/" className="github">
+                                    <a href="/" className="link github">
                                         <GitHub className="icon" />
                                     </a>
-                                    <a href="/" className="preview">
+                                    <Link to={`/projects/${d.title}`} className="link github">
                                         <Visibility className="icon" />
-                                    </a>
+                                    </Link>
                                 </nav>
 
                             </div>
                         </div>
                     ))}
-                    <div className="item empty">
-                        <h3>coming soon...</h3>
-                    </div>
-                    <div className="item empty">
-                        <h3>coming soon...</h3>
-                    </div>
-                    <div className="item empty">
-                        <h3>coming soon...</h3>
-                    </div>
+                    {renderItemEmpty(6 - (data.length))}
                 </div>
             </div>
         </div>

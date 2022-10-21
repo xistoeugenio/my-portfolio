@@ -77,3 +77,20 @@
         }
     }
 }
+@include mobileTurned {
+    .sidebar {
+        display: none;
+
+        .list {
+
+            .itemList {
+                height: 40px;
+
+                .icon {
+                    font-size: 40px;
+                    color: aqua;
+                }
+            }
+        }
+    }
+}

@@ -1,3 +1,13 @@
+export function renderItemEmpty(amount) {
+    let items = [];
+    for (let i = 0; i < amount; i++) {
+        items.push(<div className="item empty" key={i}><h3>coming soon...</h3></div>);
+    }
+    return (
+        <>{items}</>
+    );
+}
+
 export const list = [
     {
         id: "all",
@@ -19,48 +29,20 @@ export const list = [
 
 export const projects = {
 
-    all: [
-        {
-            id: 1,
-            title: "Mobile Social Media App",
-            img: "https://cdn.dribbble.com/users/2597268/screenshots/15468893/media/44313553d73ba41580f1df69749bba28.jpg?compress=1&resize=1200x900",
-        },
-        {
-            id: 2,
-            title: "Mobile Rampa UI Design",
-            img: "https://cdn.dribbble.com/users/2597268/screenshots/15468893/media/44313553d73ba41580f1df69749bba28.jpg?compress=1&resize=1200x900",
-        },
-        {
-            id: 2,
-            title: "Mobile Rampa UI Design",
-            img: "https://cdn.dribbble.com/users/2597268/screenshots/15468893/media/44313553d73ba41580f1df69749bba28.jpg?compress=1&resize=1200x900",
-        },
-    ],
     MERN: [
         {
-            id: 1,
-            title: "MERN",
-            img: "https://cdn.dribbble.com/users/5031392/screenshots/15467520/media/c36b3b15b25b1e190d081abdbbf947cf.png?compress=1&resize=1200x900",
-        },
-        {
-            id: 2,
-            title: "MERN",
-            img: "https://cdn.dribbble.com/users/3967258/screenshots/15463803/media/4fddb9a2caf3b3bd634060f706a91e73.png?compress=1&resize=1200x900",
+            id: 4,
+            title: "soccer",
+            img: "assets/soccer.jpg",
         },
     ],
-    react: [
-        {
-            id: 1,
-            title: "react",
-            img: "https://cdn.dribbble.com/users/5031392/screenshots/15467520/media/c36b3b15b25b1e190d081abdbbf947cf.png?compress=1&resize=1200x900",
-        },
-        {
-            id: 2,
-            title: "react",
-            img: "https://cdn.dribbble.com/users/3967258/screenshots/15463803/media/4fddb9a2caf3b3bd634060f706a91e73.png?compress=1&resize=1200x900",
-        },
-    ]
+    react: []
+}
 
+export let fullData = []
 
-
+for (let item in projects) {
+    projects[item].forEach((i) => {
+        fullData.push(i)
+    })
 }

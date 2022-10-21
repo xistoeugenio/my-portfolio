@@ -138,7 +138,8 @@
 
 @include mobileTurned {
     .navbar {
-        top: 0;
+        display: none;
+        /*top: 0;
 
         h3 {
             visibility: hidden;
@@ -157,6 +158,6 @@
                     color: black;
                 }
             }
-        }
+        }*/
     }
 }

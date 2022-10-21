@@ -51,6 +51,12 @@
                     left: 0;
                 }
 
+                @include mobileTurned {
+                    height: 100%;
+                    width: 100%;
+                    left: 0;
+                }
+
             }
 
             &.pink {

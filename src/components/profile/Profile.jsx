@@ -13,7 +13,7 @@ export default function Profile() {
                 <span>and I am a front-end developer</span>
             </div>
         </div>
-        <a href="">
+        <a href="/">
           <KeyboardDoubleArrowDown className='icon' />
         </a>
     </div>

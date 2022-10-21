@@ -1,7 +1,6 @@
 @import "../../global.scss";
 
 .portfolio {
-    //background-color: rgba(0, 255, 255, 0.432);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,14 +21,12 @@
     }
 
     .mainContainer {
-        //background-color: red;
         width: 90%;
-        height: 90%;
+        height: 85%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        position: relative;
+        justify-content: space-evenly;
 
         @include tablet {
             width: 100%;
@@ -41,8 +38,6 @@
             list-style: none;
             display: flex;
             justify-content: space-around;
-            position: absolute;
-            top: 0;
 
             li {
                 background-color: rgb(55, 97, 99);
@@ -67,13 +62,14 @@
             width: 700px;
             max-width: 100%;
             height: 90%;
-            max-height: 450px;
-            margin-top: 30px;
+            max-height: 475px;
+            margin-top: 25px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             align-items: center;
             overflow-y: scroll;
+            gap: 5px;
 
             &::-webkit-scrollbar {
                 display: none;
@@ -116,7 +112,7 @@
                         display: flex;
                         justify-content: space-around;
 
-                        a {
+                        .link {
                             width: 40px;
                             height: 40px;
                             display: flex;
@@ -208,6 +204,11 @@
                         background: -moz-linear-gradient(top, #7366CE 0%, #443AA4 55%, #2B1DC5 100%);
                         background: -webkit-linear-gradient(top, #7366CE 0%, #443AA4 55%, #2B1DC5 100%);
                         background: linear-gradient(to bottom, #7366CE 0%, #443AA4 55%, #2B1DC5 100%);
+
+                        @include tablet{
+                            width: 200px;
+                            transform: rotate(45deg) translateY(-14px) translateX(-12px);
+                        }
                     }
 
                     &:hover {
