@@ -50,7 +50,7 @@ export default function Portfolio() {
                                     <a href="/" className="link github">
                                         <GitHub className="icon" />
                                     </a>
-                                    <Link to={`/projects/${d.title}`} className="link github">
+                                    <Link to={`/projects/${d.title}`} className="link">
                                         <Visibility className="icon" />
                                     </Link>
                                 </nav>

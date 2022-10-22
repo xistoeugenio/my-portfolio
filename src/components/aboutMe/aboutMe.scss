@@ -1,0 +1,218 @@
+@import "../../global.scss";
+
+.aboutMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    h1 {
+        color: white;
+        font-size: 42px;
+        text-shadow: 0 0 5px #000000,
+            0 0 10px #000000,
+            0 0 15px #000000,
+            0 0 20px #000000,
+            0 0 30px #000000,
+            0 0 40px #000000,
+            0 0 55px #000000,
+            0 0 75px #000000;
+        cursor: default;
+    }
+
+    .mainContainer {
+        width: 70%;
+        height: 80%;
+        max-width: 916px;
+        max-height: 500px;
+        min-width: 784px;
+        min-height: 431px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 30px;
+
+        .containerImg {
+            height: 100%;
+            flex: 3;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .containerText {
+            position: relative;
+            height: 100%;
+            border-radius: 7px;
+            border: solid 2px aqua;
+            flex: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            //pointer-events: none;
+
+            background: #000000;
+            background: -moz-linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
+            background: -webkit-linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
+            background: linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
+
+            &:hover {
+                border: solid 2px white;
+            }
+
+            .text {
+                color: rgb(209, 193, 193);
+                text-shadow: rgb(0, 0, 0) 2px 2px 0px;
+                --darkreader-inline-color: rgb(255, 255, 255);
+                --darkreader-inline-bgimage: initial;
+                --darkreader-inline-bgcolor: #181a1b;
+                padding: 0 10px;
+                cursor: default;
+
+                h3 {
+                    font-size: 2.5em;
+                    line-height: 200%;
+                }
+
+                p {
+                    font-size: 1.4em;
+                    line-height: 1.9em;
+                    margin-bottom: 6%;
+                }
+            }
+
+            a {
+                color: aqua;
+                position: absolute;
+                bottom: -30px;
+                width: 150px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: solid 2px;
+                font-size: 130%;
+                border-radius: 10px;
+                border: solid 2px;
+                pointer-events: auto;
+
+                background: #040013;
+                background: -moz-linear-gradient(45deg, #040013 0%, #150A4B 50%, #2A1D67 100%);
+                background: -webkit-linear-gradient(45deg, #040013 0%, #150A4B 50%, #2A1D67 100%);
+                background: linear-gradient(45deg, #040013 0%, #150A4B 50%, #2A1D67 100%);
+                text-decoration: none;
+
+                &:hover {
+                    color: white;
+                    text-decoration: none;
+
+                    background: #000000;
+                    background: -moz-linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
+                    background: -webkit-linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
+                    background: linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
+
+                }
+            }
+        }
+    }
+}
+
+@include notebook {
+    .aboutMe {
+
+        .mainContainer {
+            width: 520px;
+            height: 284px;
+            min-height: auto;
+            min-width: auto;
+            background-color: black;
+            font-size: 10px;
+
+            .containerText {
+
+                .text {
+
+                    p {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .aboutMe {
+
+        .mainContainer {
+            width: 400px;
+            height: 218px;
+            min-width: 380px;
+            background-color: red;
+            font-size: 7.5px;
+
+            .containerText {
+
+                .text {
+
+                    p {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                a {
+                    width: 100px;
+                    height: 40px;
+                    bottom: -20px;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .aboutMe {
+        justify-content: space-around;
+
+        .mainContainer {
+            flex-direction: column;
+            height: 85%;
+            width: 100%;
+            min-width: 0px;
+            max-height: none;
+            font-size: 10px;
+
+            .containerImg {
+                flex: none;
+                width: 180px;
+                height: 224px;
+
+            }
+
+            .containerText {
+                flex: none;
+                height: 50%;
+                width: 90%;
+                min-width: none;
+
+                .text {
+
+                    p {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                a {
+                    width: 100px;
+                    height: 40px;
+                    bottom: -20px;
+                }
+            }
+        }
+    }
+}

@@ -3,6 +3,7 @@ import Navbar from './components/navbar/Navbar';
 import Portfolio from './components/portfolio/Portfolio';
 import Profile from './components/profile/Profile';
 import Sidebar from './components/sidebar/Sidebar';
+import AboutMe from './components/aboutMe/AboutMe';
 
 export default function MyPortfolio() {
   return (
@@ -14,12 +15,10 @@ export default function MyPortfolio() {
           <Profile />
         </div>
         <div className="section">
-          < Portfolio />
+          < AboutMe />
         </div>
-        <div className='section yellow'>
-          <div className="content">
-            nfdjngklsh
-          </div>
+        <div className='section'>
+          < Portfolio />
         </div>
         <div className='section blue'>
           <div className="content">
