@@ -1,0 +1,187 @@
+@import "../../global.scss";
+
+
+.containerText {
+    position: relative;
+    height: 100%;
+    border-radius: 7px;
+    border: solid 2px aqua;
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    //pointer-events: none;
+
+    background: #000000;
+    background: -moz-linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
+    background: -webkit-linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
+    background: linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
+
+    &:hover {
+        border: solid 2px white;
+    }
+
+    .iconClose {
+        display: none;
+    }
+
+    img {
+        display: none;
+    }
+
+    .text {
+        color: rgb(209, 193, 193);
+        text-shadow: rgb(0, 0, 0) 2px 2px 0px;
+        --darkreader-inline-color: rgb(255, 255, 255);
+        --darkreader-inline-bgimage: initial;
+        --darkreader-inline-bgcolor: #181a1b;
+        padding: 0 10px;
+        cursor: default;
+
+        h3 {
+            font-size: 2.5em;
+            line-height: 2em;
+        }
+
+        p {
+            font-size: 1.4em;
+            line-height: 1.9em;
+            margin-bottom: 1em;
+        }
+    }
+
+    a {
+        color: aqua;
+        position: absolute;
+        bottom: -30px;
+        width: 150px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid 2px;
+        font-size: 130%;
+        border-radius: 10px;
+        border: solid 2px;
+        pointer-events: auto;
+
+        background: #040013;
+        background: -moz-linear-gradient(45deg, #040013 0%, #150A4B 50%, #2A1D67 100%);
+        background: -webkit-linear-gradient(45deg, #040013 0%, #150A4B 50%, #2A1D67 100%);
+        background: linear-gradient(45deg, #040013 0%, #150A4B 50%, #2A1D67 100%);
+        text-decoration: none;
+
+        &:hover {
+            color: white;
+            text-decoration: none;
+
+            background: #000000;
+            background: -moz-linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
+            background: -webkit-linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
+            background: linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
+
+        }
+    }
+}
+
+@include mobile {
+    .containerText {
+        min-width: none;
+        height: 60px;
+        flex: none;
+
+        .text {
+            h3 {
+                text-align: center;
+                color: aqua;
+                font-size: 2em;
+
+                &::after {
+                    content: "..";
+                }
+            }
+
+            p {
+                display: none;
+            }
+        }
+
+        a {
+            display: none;
+        }
+
+        &.modal {
+            z-index: 100;
+            border: none;
+            top: 0;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            border-radius: 0;
+            animation: modal 1s alternate;
+
+            .iconClose {
+                color: white;
+                font-size: 25px;
+                border-radius: 5px;
+                background-color: rgb(168, 9, 9);
+                display: initial;
+                position: absolute;
+                top: 25px;
+                right: 25px;
+                animation: animationSize 2s infinite alternate;
+            }
+
+            @keyframes animationSize {
+                0%{
+                }
+                100% {
+                    font-size: 35px;
+                }
+            }
+
+            img {
+                display: initial;
+                width: 30vw;
+                height: 30vw;
+                border-radius: 50%;
+            }
+
+            .text {
+                font-size: 12px;
+                margin: 0 1em;
+
+                h3 {
+                    margin-bottom: 1em;
+
+                    &::after {
+                        content: "";
+                    }
+                }
+
+                p {
+                    display: block;
+                    line-height: 2em;
+                    font-size: 1.5em;
+                }
+            }
+
+            a {
+                display: flex;
+                position: initial;
+            }
+
+        }
+
+        @keyframes modal {
+            0% {
+                top: 100vh;
+            }
+
+            100% {
+                top: 0;
+            }
+        }
+    }
+}

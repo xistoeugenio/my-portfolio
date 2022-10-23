@@ -43,85 +43,8 @@
                 object-fit: cover;
             }
         }
-
-        .containerText {
-            position: relative;
-            height: 100%;
-            border-radius: 7px;
-            border: solid 2px aqua;
-            flex: 5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
-            //pointer-events: none;
-
-            background: #000000;
-            background: -moz-linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
-            background: -webkit-linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
-            background: linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
-
-            &:hover {
-                border: solid 2px white;
-            }
-
-            .text {
-                color: rgb(209, 193, 193);
-                text-shadow: rgb(0, 0, 0) 2px 2px 0px;
-                --darkreader-inline-color: rgb(255, 255, 255);
-                --darkreader-inline-bgimage: initial;
-                --darkreader-inline-bgcolor: #181a1b;
-                padding: 0 10px;
-                cursor: default;
-
-                h3 {
-                    font-size: 2.5em;
-                    line-height: 200%;
-                }
-
-                p {
-                    font-size: 1.4em;
-                    line-height: 1.9em;
-                    margin-bottom: 6%;
-                }
-            }
-
-            a {
-                color: aqua;
-                position: absolute;
-                bottom: -30px;
-                width: 150px;
-                height: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border: solid 2px;
-                font-size: 130%;
-                border-radius: 10px;
-                border: solid 2px;
-                pointer-events: auto;
-
-                background: #040013;
-                background: -moz-linear-gradient(45deg, #040013 0%, #150A4B 50%, #2A1D67 100%);
-                background: -webkit-linear-gradient(45deg, #040013 0%, #150A4B 50%, #2A1D67 100%);
-                background: linear-gradient(45deg, #040013 0%, #150A4B 50%, #2A1D67 100%);
-                text-decoration: none;
-
-                &:hover {
-                    color: white;
-                    text-decoration: none;
-
-                    background: #000000;
-                    background: -moz-linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
-                    background: -webkit-linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
-                    background: linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
-
-                }
-            }
-        }
     }
 }
-
 @include notebook {
     .aboutMe {
 
@@ -175,43 +98,27 @@
     }
 }
 
+
 @include mobile {
     .aboutMe {
         justify-content: space-around;
 
         .mainContainer {
             flex-direction: column;
+            justify-content: space-evenly;
             height: 85%;
             width: 100%;
             min-width: 0px;
             max-height: none;
             font-size: 10px;
+            margin: 0;
 
             .containerImg {
                 flex: none;
-                width: 180px;
-                height: 224px;
+                width: 70%;
+                min-width: 260px;
+                height: 70%;
 
-            }
-
-            .containerText {
-                flex: none;
-                height: 50%;
-                width: 90%;
-                min-width: none;
-
-                .text {
-
-                    p {
-                        margin-bottom: 10px;
-                    }
-                }
-
-                a {
-                    width: 100px;
-                    height: 40px;
-                    bottom: -20px;
-                }
             }
         }
     }
