@@ -14,9 +14,9 @@
     //pointer-events: none;
 
     background: #000000;
-    background: -moz-linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
-    background: -webkit-linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
-    background: linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
+    background: -moz-linear-gradient($darkLinearGradient);
+    background: -webkit-linear-gradient($darkLinearGradient);
+    background: linear-gradient($darkLinearGradient);
 
     &:hover {
         border: solid 2px white;
@@ -67,9 +67,9 @@
         pointer-events: auto;
 
         background: #040013;
-        background: -moz-linear-gradient(45deg, #040013 0%, #150A4B 50%, #2A1D67 100%);
-        background: -webkit-linear-gradient(45deg, #040013 0%, #150A4B 50%, #2A1D67 100%);
-        background: linear-gradient(45deg, #040013 0%, #150A4B 50%, #2A1D67 100%);
+        background: -moz-linear-gradient($lightLinearGradient);
+        background: -webkit-linear-gradient($lightLinearGradient);
+        background: linear-gradient($lightLinearGradient);
         text-decoration: none;
 
         &:hover {
@@ -77,9 +77,9 @@
             text-decoration: none;
 
             background: #000000;
-            background: -moz-linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
-            background: -webkit-linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
-            background: linear-gradient(45deg, #000000 0%, #061722 50%, #0A2A3E 100%);
+            background: -moz-linear-gradient($darkLinearGradient);
+            background: -webkit-linear-gradient($darkLinearGradient);
+            background: linear-gradient($darkLinearGradient);
 
         }
     }
@@ -111,6 +111,8 @@
             display: none;
         }
 
+        /*eu criei esse modal porque em mobiles eu quero 
+        esconder parte do "containerText" e exibir quando clicar*/
         &.modal {
             z-index: 100;
             border: none;
@@ -119,6 +121,7 @@
             width: 100vw;
             height: 100vh;
             border-radius: 0;
+            /*this animation is located in global.scss file*/
             animation: modal 1s alternate;
 
             .iconClose {
@@ -130,16 +133,11 @@
                 position: absolute;
                 top: 25px;
                 right: 25px;
+                /*this animation is located in global.scss file*/
                 animation: animationSize 2s infinite alternate;
             }
 
-            @keyframes animationSize {
-                0%{
-                }
-                100% {
-                    font-size: 35px;
-                }
-            }
+
 
             img {
                 display: initial;
@@ -174,14 +172,6 @@
 
         }
 
-        @keyframes modal {
-            0% {
-                top: 100vh;
-            }
 
-            100% {
-                top: 0;
-            }
-        }
     }
 }

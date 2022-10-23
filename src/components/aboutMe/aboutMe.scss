@@ -9,14 +9,7 @@
     h1 {
         color: white;
         font-size: 42px;
-        text-shadow: 0 0 5px #000000,
-            0 0 10px #000000,
-            0 0 15px #000000,
-            0 0 20px #000000,
-            0 0 30px #000000,
-            0 0 40px #000000,
-            0 0 55px #000000,
-            0 0 75px #000000;
+        text-shadow: $fontShadow;;
         cursor: default;
     }
 
@@ -53,7 +46,6 @@
             height: 284px;
             min-height: auto;
             min-width: auto;
-            background-color: black;
             font-size: 10px;
 
             .containerText {
@@ -76,7 +68,6 @@
             width: 400px;
             height: 218px;
             min-width: 380px;
-            background-color: red;
             font-size: 7.5px;
 
             .containerText {

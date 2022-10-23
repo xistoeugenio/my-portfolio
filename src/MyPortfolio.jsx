@@ -17,7 +17,7 @@ export default function MyPortfolio() {
         <div className="section">
           < AboutMe />
         </div>
-        <div className='section'>
+        <div className='section' id='portfolio'>
           < Portfolio />
         </div>
         <div className='section blue'>
