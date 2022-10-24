@@ -1,23 +1,25 @@
+@import "../../global.scss";
+
 .skill {
     box-sizing: border-box;
-    width: 160px;
-    height: 160px;
+    width: 60px;
+    height: 60px;
     position: relative;
 
     .outer {
         box-sizing: border-box;
-        height: 160px;
-        width: 160px;
+        height: 60px;
+        width: 60px;
         border-radius: 50%;
-        padding: 20px;
+        padding: 10px;
         box-shadow: 6px 6px 10px 1px rgba(0, 0, 0, 0.15),
             -6px -6px 10px 1px rgba(255, 255, 255, 0.7);
 
 
         .inner {
-            height: 120px;
-            width: 120px;
-            border-radius: 500%;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -42,11 +44,71 @@
         circle {
             fill: none;
             stroke: url(#GradientColor);
-            stroke-width: 20px;
-            stroke-dasharray: 472;
-            stroke-dashoffset: 472;
-            
+            stroke-width: 10px;
+            stroke-dasharray: 154;
+
+        }
+
+        &.medium {
+            display: block;
+        }
+
+        &.small {
+            display: none;
         }
     }
 
+    &.animation {
+        circle {
+            animation: circlePercent 2s linear forwards;
+        }
+    }
+
+}
+
+/*@include mobile {
+    .skill {
+        width: 40px;
+        height: 40px;
+
+        .outer {
+            width: 40px;
+            height: 40px;
+
+            .inner {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        svg {
+
+            .circle {
+                stroke-width: 5px;
+                stroke-dasharray: 150;
+            }
+
+            &.medium {
+                opacity: 0;
+            }
+
+            &.small {
+                display: block;
+            }
+
+
+        }
+
+        &.animation {
+            circle {
+                animation: circlePercent2 2s linear forwards;
+            }
+        }
+    }
+}*/
+
+@keyframes circlePercent {
+    0% {
+        stroke-dashoffset: 154;
+    }
 }

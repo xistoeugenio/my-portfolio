@@ -9,13 +9,32 @@ export default function Card({ onClick }) {
 
     return (
         <div className='card' onClick={onClick}>
-            <div className="cardBack" onClick={()=>setAnimation(false)}>
-                <CircleProgress 
-                animation={animation}
-                percent = {53}
-                />
+            <div className="cardBack" onClick={() => setAnimation(false)}>
+                <ul className='skillList'>
+                    <li className='skillItem'>
+                        <CircleProgress animation={animation} percent={74} />
+                        <p className='skillName'>HTML & CSS</p>
+                    </li>
+                    <li className='skillItem'>
+                        <CircleProgress animation={animation} percent={69} />
+                        <p className='skillName'>Javascript</p>
+                    </li>
+                    <li className='skillItem'>
+                        <CircleProgress animation={animation} percent={65} />
+                        <p className='skillName'>MERN stack</p>
+                    </li>
+                    <li className='skillItem'>
+                        <CircleProgress animation={animation} percent={57} />
+                        <p className='skillName'>MYSQL</p>
+                    </li>
+                    <li className='skillItem'>
+                        <CircleProgress animation={animation} percent={53} />
+                        <p className='skillName'>GIT</p>
+                    </li>
+                </ul>
+                <a href="#/">My certificates</a>
             </div>
-            <div className="cardFront" onClick={()=>setAnimation(true)}></div>
+            <div className="cardFront" onClick={() => setAnimation(true)}></div>
         </div>
     )
 }
