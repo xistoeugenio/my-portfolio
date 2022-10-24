@@ -18,8 +18,11 @@
     }
 
     .cardBack {
-        background-color: blue;
+        background-color: rgb(66, 56, 56);
         transform: rotateY(180deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .cardFront {
