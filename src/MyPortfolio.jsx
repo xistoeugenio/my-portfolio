@@ -4,6 +4,7 @@ import Portfolio from './components/portfolio/Portfolio';
 import Profile from './components/profile/Profile';
 import Sidebar from './components/sidebar/Sidebar';
 import AboutMe from './components/aboutMe/AboutMe';
+import Contact from './components/contact/Contact';
 
 export default function MyPortfolio() {
   return (
@@ -15,15 +16,13 @@ export default function MyPortfolio() {
           <Profile />
         </div>
         <div className="section">
-          < AboutMe />
+          <Contact/>
         </div>
         <div className='section' id='portfolio'>
           < Portfolio />
         </div>
-        <div className='section blue'>
-          <div className="content">
-            nfdjngklsh
-          </div>
+        <div className='section'>
+          < AboutMe />
         </div>
       </section>
     </div>

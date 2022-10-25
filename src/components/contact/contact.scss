@@ -1,0 +1,12 @@
+.contact{
+    background-color: rgba(137, 43, 226, 0.616);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .progressBar{
+        background-color: white;
+        width: 500px;
+    }
+}
