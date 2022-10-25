@@ -23,16 +23,16 @@ export default function Card({ onClick }) {
                         <CircleProgress animation={animation} percent={65} />
                         <p className='skillName'>MERN stack</p>
                     </li>
-                    <li className='skillItem'>
+                    <li className='skillItem mysql'>
                         <CircleProgress animation={animation} percent={57} />
                         <p className='skillName'>MYSQL</p>
                     </li>
-                    <li className='skillItem'>
+                    <li className='skillItem git'>
                         <CircleProgress animation={animation} percent={53} />
                         <p className='skillName'>GIT</p>
                     </li>
                 </ul>
-                <a href="#/">My certificates</a>
+                <a href="https://www.devmedia.com.br/perfil/xisto-eugenio" target="blank" className='certificate'>My certificates</a>
             </div>
             <div className="cardFront" onClick={() => setAnimation(true)}></div>
         </div>

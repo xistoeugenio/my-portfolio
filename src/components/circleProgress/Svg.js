@@ -9,8 +9,8 @@ export default function Svg({ percent }) {
         >
             <defs>
                 <linearGradient id="GradientColor">
-                    <stop offset="0%" stop-color="#e91e63" />
-                    <stop offset="100%" stop-color="#673ab7" />
+                    <stop offset="0%" stop-color="#6fb80f" />
+                    <stop offset="100%" stop-color="#2a3a16" />
                 </linearGradient>
             </defs>
             <circle cx="30" cy="30" r="25"
