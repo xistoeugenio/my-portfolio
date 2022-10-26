@@ -2,10 +2,10 @@ import "./barProgress.scss"
 import "react-step-progress-bar/styles.css";
 import { ProgressBar, Step } from "react-step-progress-bar";
 
-export default function BarProgress() {
+export default function BarProgress({percent}) {
     return (
         <ProgressBar
-            percent={59}
+            percent={percent}
             filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
         >
             <Step transition="scale">
