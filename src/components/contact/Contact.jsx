@@ -26,18 +26,14 @@ export default function Contact() {
 
   return (
     <div className="contact">
-      <div className="progressBar">
-        <BarProgress percent={percent}/>
-      </div>
-      <div className="forms">
-        <div className="slider" style={{ transform: `translateX(-${(step * 500) - 500}px)` }}>
-          <Form type="info" setStep ={setStep}/>
-          <Form type="msg" setStep ={setStep}/>
-          <Form type="finished" setStep ={setStep}/>
+      <div className="formContainer">
+        <div className="progressBar">
+          <BarProgress percent={percent} />
         </div>
-
+        <div className="slider" >
+          <Form setStep={setStep} step={step} />
+        </div>
       </div>
-
     </div>
   )
 }

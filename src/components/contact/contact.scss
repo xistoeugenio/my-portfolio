@@ -5,18 +5,26 @@
     align-items: center;
     justify-content: space-evenly;
 
-    .progressBar {
-        background-color: white;
-        width: 500px;
-    }
+    .formContainer {
+        background-color: burlywood;
+        width: 550px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
 
-    .forms {
-        width: 500px;
-        overflow-x: hidden;
-        
+        .progressBar {
+            background-color: white;
+            width: calc(500px - 30px);
+        }
+
         .slider {
-            display: flex;
-            transition: all 1s ease;
+            width: 500px;
+            max-width: 500px;
+            height: 350px;
+            overflow: hidden;
+
         }
     }
 
