@@ -2,7 +2,7 @@ import "./form.scss"
 
 export default function Form({setStep, step }) {
     return (
-        <div className="form " style={{ transform: `translateX(-${(step * 500) - 500}px)` }}>
+        <div className="form " style={{ transform: `translateX(-${(step * 550) - 550}px)` }}>
             <div className="sectionForm">
                 <form className="inputs">
                     <input type="text" placeholder="name" className="name" />

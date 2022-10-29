@@ -46,15 +46,17 @@
                 border-radius: 70px;
                 display: flex;
                 background: rgb(32, 43, 51);
-                background: linear-gradient(45deg, rgba(32, 43, 51, 1) 0%, rgba(22, 113, 176, 1) 41%, rgba(0, 212, 255, 1) 99%);
+                background: linear-gradient(45deg, rgba(32, 43, 51, 1) 0%,
+                        rgba(22, 113, 176, 1) 41%, rgba(0, 212, 255, 1) 99%);
 
-                @include mobileTurned{
+                @include mobileTurned {
                     width: 100%;
                 }
 
-                @include tablet{
+                @include tablet {
                     width: 100%;
                 }
+
                 .skillName {
                     color: rgb(255, 255, 255);
                     text-decoration: none;
@@ -78,26 +80,30 @@
                     --darkreader-inline-bgcolor: #181a1b;
                 }
 
-                &.mysql{
-                    @include mobileTurned{
+                &.mysql {
+                    @include mobileTurned {
                         display: none;
                     }
-                    @include tablet{
+
+                    @include tablet {
                         display: none;
                     }
-                    @include mobile{
+
+                    @include mobile {
                         display: flex;
                     }
                 }
 
-                &.git{
-                    @include mobile{
+                &.git {
+                    @include mobile {
                         display: none;
                     }
-                    @include mobileTurned{
+
+                    @include mobileTurned {
                         display: none;
                     }
-                    @include tablet{
+
+                    @include tablet {
                         display: none;
                     }
                 }
