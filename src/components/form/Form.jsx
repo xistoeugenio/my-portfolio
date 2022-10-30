@@ -1,33 +1,57 @@
+import { useState } from "react"
+import FormInput from "../formInput/FormInput"
+import { inputs } from "../../data/formData"
 import "./form.scss"
 
-export default function Form({setStep, step }) {
+export default function Form({ setStep, step }) {
+    const [values, setValues] = useState({
+        name: "",
+        email: "",
+        mensagem: ""
+    })
+
+    const handleChange = (e) => {
+        setValues({ ...values, [e.target.name]: e.target.value })
+    }
+
+    const next = (e) => {
+        e.preventDefault();
+        console.log(values)
+        setStep(2)
+    }
+
     return (
         <div className="form " style={{ transform: `translateX(-${(step * 550) - 550}px)` }}>
-            <div className="sectionForm">
-                <form className="inputs">
-                    <input type="text" placeholder="name" className="name" />
-                    <input type="email" placeholder="email" className="email" />
-                    <input type="tel" placeholder="phone(optional)"/>
-                </form>
+            <form className="sectionForm " onSubmit={next}>
+                <div className="inputs" >
+                    {inputs.map((input) => (
+                        <FormInput
+                            key={input.id}
+                            {...input}
+                            value={values[input.name]}
+                            handleChange={handleChange} />
+                    ))}
+                </div>
                 <div className="buttons">
-                    <button className="next" onClick={() => { setStep(2) }}>
+                    <button className="next">
                         next
                     </button>
                 </div>
-            </div>
-            <div className="sectionForm">
-                <form className="inputs">
-                    <input type="text" placeholder="your message" className="message" />
-                </form>
+            </form>
+            <form className="sectionForm">
+                <div className="inputs">
+                    <label>Your message</label>
+                    <textarea required></textarea>
+                </div>
                 <div className="buttons">
                     <button className="previous" onClick={() => { setStep(1) }}>
                         previous
                     </button>
-                    <button className="submit" onClick={() => { setStep(3) }} >
+                    <button className="submit">
                         submit
                     </button>
                 </div>
-            </div>
+            </form>
             <div className="sectionForm">
                 <div className="finisheContainer">
                     hey there this is the end

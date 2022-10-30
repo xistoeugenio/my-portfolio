@@ -26,7 +26,7 @@ export default function BarProgress({percent}) {
                         style={{ backgroundColor: `${accomplished ? "gray" : "blue"}` }}
                         width="30"
                     >
-                        2
+                        {accomplished ? "hey": "opa"}
                     </div>
                 )}
             </Step>

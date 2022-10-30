@@ -30,45 +30,48 @@
             background: -webkit-linear-gradient($darkLinearGradient);
             background: linear-gradient($darkLinearGradient);
 
-            input {
-                width: 90%;
-                height: 40px;
-                border-radius: 5px;
-                outline: none;
-                background: linear-gradient(45deg,rgba(22, 113, 176, 1) 0%, rgba(0, 212, 255, 1) 99%);
+            label {
+                color: aqua;
+                font-size: 22px;
             }
 
-            .message {
-                height: 90%;
+            textarea {
+                width: 90%;
+                height: 70%;
+                border-radius: 5px;
+                font-size: 25px;
             }
+
         }
 
         .buttons {
             width: 90%;
             height: 40px;
+            font-size: 42px;
             display: flex;
             justify-content: space-around;
-            
-            button{
+
+            button {
                 width: 100px;
                 height: 38px;
                 border-radius: 5px;
                 border: 1px solid dodgerblue;
                 cursor: pointer;
 
-                background: linear-gradient(45deg,rgba(22, 113, 176, 1) 0%, rgba(0, 212, 255, 1) 99%);
+                background: linear-gradient(45deg, rgba(22, 113, 176, 1) 0%, rgba(0, 212, 255, 1) 99%);
 
-                &:hover{
+                &:hover {
                     border: 1px solid black;
                 }
             }
         }
 
-        .finisheContainer{
+        .finisheContainer {
             background-color: pink;
             width: 90%;
             height: 90%;
         }
+
     }
 
 }
