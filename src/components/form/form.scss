@@ -75,3 +75,17 @@
     }
 
 }
+
+@include tablet{
+    .form{
+        width: 1050px;
+
+        .sectionForm{
+            width: 350px;
+            
+            .inputs{
+                width: 315px;
+            }
+        }
+    }
+}

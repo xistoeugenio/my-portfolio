@@ -19,9 +19,9 @@
         justify-content: space-around;
 
         background-image:
-        repeating-linear-gradient(315deg, #00FFFF2E 92%, #073AFF00 100%),
-        repeating-linear-gradient(-315deg, #00FFFF2E 92%, #073AFF00 100%),
-        radial-gradient(160% 154% at 711px -303px, #000000 0%, #0A2A3E 100%);
+            repeating-linear-gradient(315deg, #00FFFF2E 92%, #073AFF00 100%),
+            repeating-linear-gradient(-315deg, #00FFFF2E 92%, #073AFF00 100%),
+            radial-gradient(160% 154% at 711px -303px, #000000 0%, #0A2A3E 100%);
 
         .progressBar {
             background-color: white;
@@ -35,6 +35,22 @@
             max-height: 87%;
             overflow: hidden;
 
+        }
+    }
+
+    @include tablet {
+        .formContainer {
+            width: 350px;
+            height: 400px;
+
+            .progressBar{
+                width: calc(315px - 30px);
+            }
+
+
+            .slider {
+                width: 350px;
+            }
         }
     }
 
