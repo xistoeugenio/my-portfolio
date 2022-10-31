@@ -26,6 +26,7 @@ export default function Contact() {
 
   return (
     <div className="contact">
+      <h1>Contact me</h1>
       <div className="formContainer">
         <div className="progressBar">
           <BarProgress percent={percent} />

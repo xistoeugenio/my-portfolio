@@ -4,6 +4,7 @@ import { inputs } from "../../data/formData"
 import "./form.scss"
 
 export default function Form({ setStep, step }) {
+    const translateX = (-step * 33.333)+ 33.333
     const [values, setValues] = useState({
         name: "",
         email: "",
@@ -21,7 +22,7 @@ export default function Form({ setStep, step }) {
     }
 
     return (
-        <div className="form " style={{ transform: `translateX(-${(step * 550) - 550}px)` }}>
+        <div className="form " style={{ transform: `translateX(${translateX}%)` }}>
             <form className="sectionForm " onSubmit={next}>
                 <div className="inputs" >
                     {inputs.map((input) => (

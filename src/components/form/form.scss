@@ -78,13 +78,13 @@
 
 @include tablet{
     .form{
-        width: 1050px;
+        width: 300%;
 
         .sectionForm{
-            width: 350px;
+            width: 100%;
             
             .inputs{
-                width: 315px;
+                width: 90%;
             }
         }
     }
