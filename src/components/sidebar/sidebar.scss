@@ -8,7 +8,7 @@
     justify-content: space-around;
     position: fixed;
     left: 30px;
-    z-index: 1;
+    z-index: 5;
 
     @include tablet {
         left: 5px;

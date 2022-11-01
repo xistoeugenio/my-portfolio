@@ -12,16 +12,16 @@ export default function MyPortfolio() {
       <Navbar />
       <Sidebar />
       <section className='sections'>
-        <div className="section">
+        <div className="section" id='home'>
           <Profile />
         </div>
-        <div className="section">
+        <div className="section" id='about'>
           <Contact/>
         </div>
         <div className='section' id='portfolio'>
           < Portfolio />
         </div>
-        <div className='section'>
+        <div className='section' id='contact'>
           < AboutMe />
         </div>
       </section>

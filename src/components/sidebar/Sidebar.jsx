@@ -1,23 +1,34 @@
-import {GitHub, Email, LinkedIn, Instagram} from "@mui/icons-material"
+import { GitHub, Email, LinkedIn, Instagram } from "@mui/icons-material"
+import { useState } from "react"
+import ModalInstagram from "../modalInstagram/ModalInstagram"
 import "./sidebar.scss"
 
-export default function Sidebar({row}) {
+export default function Sidebar({ row }) {
+  const [showModal, setShowModal] = useState(false)
+
   return (
-    <div className={row ? "sidebar row": "sidebar"}>
+    <div className={row ? "sidebar row" : "sidebar"}>
       <ul className="list">
         <li className="itemList">
-          <GitHub className="icon"/>
+          <a href="https://github.com/xistoeugenio" target="blank">
+            <GitHub className="icon" />
+          </a>
         </li>
         <li className="itemList">
-          <Email className="icon"/>
+          <a href="mailto:xistoeugeniosilva1@gmail.com" target="blank">
+            <Email className="icon" />
+          </a>
         </li>
         <li className="itemList">
-          <LinkedIn className="icon"/>
+          <a href="https://www.linkedin.com/in/xisto-eugênio-266029171/" target="blank">
+            <LinkedIn className="icon" />
+          </a>
         </li>
-        <li className="itemList">
+        <li className="itemList" onClick={()=>{setShowModal(true)}}>
           <Instagram className="icon"/>
         </li>
       </ul>
+      {showModal && <ModalInstagram setShowModal = {setShowModal}/>}
     </div>
   )
 }

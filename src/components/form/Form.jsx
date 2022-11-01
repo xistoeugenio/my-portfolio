@@ -8,16 +8,20 @@ export default function Form({ setStep, step }) {
     const [values, setValues] = useState({
         name: "",
         email: "",
-        mensagem: ""
+        message: ""
     })
 
     const handleChange = (e) => {
         setValues({ ...values, [e.target.name]: e.target.value })
     }
 
+    const previous =(e)=>{
+        e.preventDefault()
+            setStep(1)
+    }
+
     const next = (e) => {
         e.preventDefault();
-        console.log(values)
         setStep(2)
     }
 
@@ -42,10 +46,13 @@ export default function Form({ setStep, step }) {
             <form className="sectionForm">
                 <div className="inputs">
                     <label>Your message</label>
-                    <textarea required></textarea>
+                    <textarea 
+                    required
+                    name="message"
+                    onChange={handleChange}></textarea>
                 </div>
                 <div className="buttons">
-                    <button className="previous" onClick={() => { setStep(1) }}>
+                    <button className="previous" onClick={previous}>
                         previous
                     </button>
                     <button className="submit">

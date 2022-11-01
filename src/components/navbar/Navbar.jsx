@@ -14,20 +14,20 @@ export default function Navbar() {
     }
     return (
         <header className="navbar">
-            <h3>LOGO</h3>
-            <Sidebar row={true} className = "row"/>
-            <nav className={open ? "responsive_nav": ""} >
-                <a href="/#" onClick={hideMenu}>Home</a>
-                <a href="/#" onClick={hideMenu}>My work</a>
-                <a href="/#" onClick={hideMenu}>Blog</a>
-                <a href="/#" onClick={hideMenu}>About me</a>
+            <h3>XISTO</h3>
+            <Sidebar row={true} className="row" />
+            <nav className={open ? "responsive_nav" : ""} >
+                <a href="#home" onClick={hideMenu}>Home</a>
+                <a href="#about" onClick={hideMenu}>About me</a>
+                <a href="#portfolio" onClick={hideMenu}>My projects</a>
+                <a href="#contact" onClick={hideMenu}>Contact me</a>
                 <button onClick={hideMenu}>
                     <Close />
                 </button>
             </nav>
-            <button 
-            className={"menu-btn " + (open && "hide")}
-            onClick={() => setOpen(true)}>
+            <button
+                className={"menu-btn " + (open && "hide")}
+                onClick={() => setOpen(true)}>
                 <Dehaze />
             </button>
         </header>

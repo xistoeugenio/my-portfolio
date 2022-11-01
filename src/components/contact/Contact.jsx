@@ -6,7 +6,7 @@ import "./contact.scss"
 
 export default function Contact() {
   const [step, setStep] = useState(1)
-  const [percent, setPercent] = useState()
+  const [percent, setPercent] = useState(0)
 
   useEffect(() => {
     switch (step) {
