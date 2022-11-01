@@ -16,13 +16,13 @@ export default function MyPortfolio() {
           <Profile />
         </div>
         <div className="section" id='about'>
-          <Contact/>
+          < AboutMe />
         </div>
         <div className='section' id='portfolio'>
           < Portfolio />
         </div>
         <div className='section' id='contact'>
-          < AboutMe />
+          <Contact />
         </div>
       </section>
     </div>

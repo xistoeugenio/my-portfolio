@@ -23,6 +23,7 @@
     }
 
     h3 {
+        cursor: default;
 
         @include mobile {
             display: none;
@@ -139,25 +140,5 @@
 @include mobileTurned {
     .navbar {
         display: none;
-        /*top: 0;
-
-        h3 {
-            visibility: hidden;
-        }
-
-        nav {
-
-            a {
-                color: #000000;
-                background-color: aqua;
-                padding: 5px;
-                text-shadow: none;
-                border-radius: 5px;
-
-                &:hover {
-                    color: black;
-                }
-            }
-        }*/
     }
 }
