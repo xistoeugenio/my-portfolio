@@ -70,20 +70,46 @@
             background-color: pink;
             width: 90%;
             height: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                width: 50%;
+                min-width: 200px;
+                height: 50%;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                font-size: 20px;
+                text-align: center;
+                padding: 10px;
+
+                &.error {
+                    background-color: red;
+                }
+
+                &.success{
+                    width: 70%;
+                    height: auto;
+                    display: block;
+                    background-color: green;
+                }
+            }
         }
 
     }
 
 }
 
-@include tablet{
-    .form{
+@include tablet {
+    .form {
         width: 300%;
 
-        .sectionForm{
+        .sectionForm {
             width: 100%;
-            
-            .inputs{
+
+            .inputs {
                 width: 90%;
             }
         }
