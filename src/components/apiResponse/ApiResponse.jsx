@@ -6,7 +6,9 @@ export default function ApiResponse({ name, email, type, content }) {
             {type === "error" ?
                 <p className='error'>
                     {content === "Network Error" ?
-                        "there's a problem with our server, but don't you worry, I'm working to solve it ASAP." :
+                        `I'm having some problems hosting my node js application.
+                         But don't worry I'm already working to solve it
+                          and until then you can contact me by email.` :
                         content}
                 </p> :
                 <p className='success'>

@@ -25,6 +25,10 @@
         &:invalid[focused="true"]~span {
             opacity: 1;
         }
+
+        &::placeholder{
+            color: rgb(46, 43, 43);
+        }
     }
 
     .alert {

@@ -8,7 +8,7 @@ export default function Modal() {
     return (
         <div className={modal ? "containerText modal" : "containerText"} >
             <Close className="iconClose" onClick={() => setModal(false)} />
-            <img src="assets/xisto.jpg" alt="" />
+            <img src="assets/xisto3.jpg" alt="" />
             <div className="text">
                 <h3 onClick={() => setModal(true)}>Hi, my name is Xisto.</h3>
                 <p>

@@ -129,6 +129,7 @@
     .cardFront {
         background: url("../../../public/assets/xisto2.jpg");
         background-size: cover;
+        background-position: center;
         /*this animation is located in global.scss file*/
         animation: animationShadow 1s infinite alternate;
         transition: all 5s ease;

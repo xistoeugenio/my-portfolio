@@ -4,6 +4,7 @@ import { inputs } from "../../data/formData"
 import "./form.scss"
 import axios from "axios"
 import ApiResponse from "../apiResponse/ApiResponse"
+import { CircularProgress } from "@mui/material"
 
 export default function Form({ setStep, step }) {
     const translateX = (-step * 33.333) + 33.333
@@ -32,7 +33,7 @@ export default function Form({ setStep, step }) {
         e.preventDefault()
         setStep(3)
         try {
-            const res = await axios.post("http://localhost:8800/messages", values)
+            const res = await axios.post(process.env.CONTACT_URL || "http://localhost:8800/messages", values)
             const { email, name } = res.data
             setFinalMessage(<ApiResponse email={email} name={name} />)
         } catch (error) {
@@ -79,10 +80,11 @@ export default function Form({ setStep, step }) {
                 </div>
             </form>
             <div className="sectionForm">
-                <div className="finisheContainer">
-                    {finalMessage === "" ? "waiting..." :
+                <div className="finishContainer">
+                    {finalMessage === "" ? <CircularProgress className="iconCircular"/> :
                         <>
                             {finalMessage}
+                            <a href="mailto:xistoeugeniosilva1@gmail.com">Email</a>
                         </>}
                 </div>
             </div>

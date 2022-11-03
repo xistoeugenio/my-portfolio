@@ -2,7 +2,7 @@ export const inputs = [
     {
         id: 1,
         name: "name",
-        placeholder: "your name",
+        placeholder: "Your name",
         type: "text",
         label: "Name",
         required: true,
@@ -12,7 +12,7 @@ export const inputs = [
     {
         id: 2,
         name: "email",
-        placeholder: "your email",
+        placeholder: "Your email",
         type: "email",
         label: "Email",
         required: true,
