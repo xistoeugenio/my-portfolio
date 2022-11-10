@@ -2,7 +2,6 @@ import "./portfolio.scss";
 import { Visibility, GitHub } from "@mui/icons-material";
 import { projects, list, fullData, renderItemEmpty } from "../../data/dataPortfolio";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 export default function Portfolio() {
     const [selected, setSelected] = useState("all")
@@ -15,6 +14,9 @@ export default function Portfolio() {
                 break
             case "react":
                 setData(projects.react);
+                break
+            case "typescript":
+                setData(projects.typescript);
                 break
             default:
                 setData(fullData)
@@ -47,12 +49,12 @@ export default function Portfolio() {
 
                                 <h3>{d.title}</h3>
                                 <nav>
-                                    <a href="/" className="link github">
+                                    <a href={d.github} className="link github" target="blank">
                                         <GitHub className="icon" />
                                     </a>
-                                    <Link to={`/projects/${d.title}`} className="link">
+                                    <a href={d.preview} className="link" target="blank">
                                         <Visibility className="icon" />
-                                    </Link>
+                                    </a>
                                 </nav>
 
                             </div>

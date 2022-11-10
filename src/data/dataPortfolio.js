@@ -22,8 +22,8 @@ export const list = [
         title: "react",
     },
     {
-        id: "design",
-        title: "Design",
+        id: "typescript",
+        title: "typescript",
     },
 ];
 
@@ -32,11 +32,14 @@ export const projects = {
     MERN: [
         {
             id: 4,
-            title: "soccer",
+            title: "soccer (developing)",
             img: "assets/soccer.jpg",
+            github: "https://github.com/xistoeugenio/soccer-quiz",
+            preview: "https://players-quiz.netlify.app"
         },
     ],
-    react: []
+    react: [],
+    typescript: []
 }
 
 export let fullData = []
