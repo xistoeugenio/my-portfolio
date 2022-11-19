@@ -35,7 +35,7 @@ export const projects = {
             title: "soccer (developing)",
             img: "assets/soccer.jpg",
             github: "https://github.com/xistoeugenio/soccer-quiz",
-            preview: "https://players-quiz.netlify.app"
+            preview: "https://socciz.online/"
         },
     ],
     react: [],

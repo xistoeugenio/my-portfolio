@@ -33,7 +33,7 @@ export default function Form({ setStep, step }) {
         e.preventDefault()
         setStep(3)
         try {
-            const res = await axios.post(process.env.CONTACT_URL || "http://localhost:8800/messages", values)
+            const res = await axios.post(process.env.CONTACT_URL || "https://contact-xisto.onrender.com", values)
             const { email, name } = res.data
             setFinalMessage(<ApiResponse email={email} name={name} />)
         } catch (error) {
@@ -81,11 +81,7 @@ export default function Form({ setStep, step }) {
             </form>
             <div className="sectionForm">
                 <div className="finishContainer">
-                    {finalMessage === "" ? <CircularProgress className="iconCircular"/> :
-                        <>
-                            {finalMessage}
-                            <a href="mailto:xistoeugeniosilva1@gmail.com">Email</a>
-                        </>}
+                    {finalMessage === "" ? <CircularProgress className="iconCircular" /> : finalMessage}
                 </div>
             </div>
         </div>
