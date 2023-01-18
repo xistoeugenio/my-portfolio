@@ -32,14 +32,22 @@ export const projects = {
     MERN: [
         {
             id: 4,
-            title: "soccer (developing)",
+            title: "Socciz",
             img: "assets/soccer.jpg",
             github: "https://github.com/xistoeugenio/soccer-quiz",
             preview: "https://socciz.online/"
         },
     ],
     react: [],
-    typescript: []
+    typescript: [
+        {
+            id: 4,
+            title: "typescript projects",
+            img: "assets/typescript.png",
+            github: "https://github.com/xistoeugenio/mini-typescript-projects",
+            preview: "https://xistoprojects.online/"
+        },
+    ]
 }
 
 export let fullData = []
