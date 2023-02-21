@@ -25,10 +25,7 @@
             align-items: center;
             justify-content: space-around;
 
-            background: #000000;
-            background: -moz-linear-gradient($darkLinearGradient);
-            background: -webkit-linear-gradient($darkLinearGradient);
-            background: linear-gradient($darkLinearGradient);
+            @include darkBackgroundGradient;
 
             label {
                 color: aqua;
@@ -111,9 +108,7 @@
                 border: 2px solid blue;
                 border-radius: inherit;
 
-                background: -moz-linear-gradient($lightLinearGradient);
-                background: -webkit-linear-gradient($lightLinearGradient);
-                background: linear-gradient($lightLinearGradient);
+                @include lightBackgroundGradient;
 
                 &:hover {
                     border: 2px solid white;

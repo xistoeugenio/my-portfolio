@@ -12,10 +12,7 @@
     align-items: center;
     justify-content: space-evenly;
 
-    background: #000000;
-    background: -moz-linear-gradient($darkLinearGradient);
-    background: -webkit-linear-gradient($darkLinearGradient);
-    background: linear-gradient($darkLinearGradient);
+    @include darkBackgroundGradient;
 
     &:hover {
         border: solid 2px white;
@@ -64,14 +61,12 @@
         border-radius: 10px;
         border: solid 2px;
         pointer-events: auto;
-
-        background: #040013;
-        background: -moz-linear-gradient($lightLinearGradient);
-        background: -webkit-linear-gradient($lightLinearGradient);
-        background: linear-gradient($lightLinearGradient);
         text-decoration: none;
 
-        @include mobileTurned{
+        @include lightBackgroundGradient;
+
+
+        @include mobileTurned {
             bottom: -15px;
             height: 30px;
         }
@@ -80,10 +75,7 @@
             color: white;
             text-decoration: none;
 
-            background: #000000;
-            background: -moz-linear-gradient($darkLinearGradient);
-            background: -webkit-linear-gradient($darkLinearGradient);
-            background: linear-gradient($darkLinearGradient);
+            @include darkBackgroundGradient;
 
         }
     }

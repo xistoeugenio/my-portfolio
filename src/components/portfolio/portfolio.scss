@@ -76,10 +76,6 @@
                 box-shadow: 8px 8px 5px 0px #000000;
 
                 .info {
-                    background: #000000;
-                    background: -moz-linear-gradient($darkLinearGradient);
-                    background: -webkit-linear-gradient($darkLinearGradient);
-                    background: linear-gradient($darkLinearGradient);
                     position: absolute;
                     top: 0;
                     width: 100%;
@@ -92,6 +88,8 @@
                     transition: all 0.5s ease;
                     cursor: default;
                     z-index: -1;
+
+                    @include darkBackgroundGradient;
 
                     h3 {
                         color: #7e6fd4;
@@ -181,9 +179,7 @@
                 &.empty {
                     overflow: hidden;
                     cursor: default;
-                    background: -moz-linear-gradient($darkLinearGradient);
-                    background: -webkit-linear-gradient($darkLinearGradient);
-                    background: linear-gradient($darkLinearGradient);
+                    @include darkBackgroundGradient;
 
                     h3 {
                         width: 250px;

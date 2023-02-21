@@ -13,6 +13,20 @@ $darkLinearGradient: 45deg, #000000 0%, #061722 50%, #0A2A3E 100%;
 
 $lightLinearGradient: 45deg, #040013 0%, #150A4B 50%, #2A1D67 100%;
 
+@mixin darkBackgroundGradient {
+    background: #000000;
+    background: -moz-linear-gradient($darkLinearGradient);
+    background: -webkit-linear-gradient($darkLinearGradient);
+    background: linear-gradient($darkLinearGradient);
+}
+
+@mixin lightBackgroundGradient {
+    background: #040013;
+    background: -moz-linear-gradient($lightLinearGradient);
+    background: -webkit-linear-gradient($lightLinearGradient);
+    background: linear-gradient($lightLinearGradient);
+}
+
 
 /*animations*/
 
