@@ -25,7 +25,12 @@ export default function RootLayout({
           disableTransitionOnChange
           storageKey="portfolio-theme-2"
         >
-          {children}
+          <div
+            className="w-full h-full bg-[url('/light-background.jpg')]
+           dark:bg-[url('/dark-background.png')] bg-cover bg-center"
+          >
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>

@@ -1,25 +1,33 @@
-"use client"
+"use client";
 
 import { Navbar } from "@/components/navbar";
-import { ContactMe } from "@/components/sections/contactMe";
+import { AboutMe } from "@/components/sections/about-me";
+import { ContactMe } from "@/components/sections/contact-me";
+import { Home } from "@/components/sections/home";
+import { Projects } from "@/components/sections/projects";
 
-export default function Home() {
+import { Element } from "react-scroll";
 
+export default function Page() {
   return (
     <>
-    <Navbar/>
-      <div className="bg-slate-500 w-full h-full snap-y snap-mandatory overflow-y-scroll">
-        <div className="w-full h-full snap-start bg-neutral-700 flex items-center justify-center">
-          <div className="text-white">home</div>
-        </div>
-        <div className="w-full h-full snap-start bg-black flex items-center justify-center">
-          <div className="text-white">about</div>
-        </div>
-        <div className="w-full h-full snap-start bg-neutral-700  flex items-center justify-center">
-          <div className="text-white">projects</div>
+      <Navbar />
+      <Element
+        name="test7"
+        className="element"
+        id="containerElement"
+        style={{
+          height: "100%",
+          overflow: "scroll",
+        }}
+      >
+        <Home />
+        <div className="bg-slate-300 dark:bg-slate-800 h-[200%]">
+          <AboutMe />
+          <Projects />
         </div>
         <ContactMe />
-      </div>
+      </Element>
     </>
   );
 }
