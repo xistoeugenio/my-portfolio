@@ -1,3 +1,4 @@
+import { ContactForm } from "../form/contact-form";
 
 export const ContactMe = () => {
   return (
@@ -5,7 +6,7 @@ export const ContactMe = () => {
       className="w-full h-screen snap-start flex items-center justify-center"
       id="contact"
     >
-      <div className="text-white">contact</div>
+      <ContactForm/>
     </div>
   );
 };
