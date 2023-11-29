@@ -16,17 +16,23 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
 import PhoneInput from "react-phone-number-input";
-import 'react-phone-number-input/style.css'
+import "react-phone-number-input/style.css";
+import { useAction } from "@/hooks/use-action";
+import { createdMessage } from "@/actions/create-message";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
+  name: z.string().min(3, {
+    message: "Name must be at least 3 characters.",
   }),
-  email: z.string().min(1).max(255).refine((value) => emailRegex.test(value), {
-    message: 'Invalid email address',
-  }),
+  email: z
+    .string()
+    .min(1)
+    .max(255)
+    .refine((value) => emailRegex.test(value), {
+      message: "Invalid email address",
+    }),
   phoneNumber: z.string().optional(),
   message: z.string().min(2, {
     message: "Username must be at least 2 characters.",
@@ -34,16 +40,27 @@ const formSchema = z.object({
 });
 
 export const ContactForm = () => {
+  const { execute } = useAction(createdMessage, {
+    onSuccess: (data) => {
+      console.log(data, "it worked");
+    },
+  });
+
   const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema)
-  })
-  const onSubmit=(values:z.infer<typeof formSchema>)=>{
-    console.log(values)
-  }
+    resolver: zodResolver(formSchema),
+  });
+
+  const onSubmit = (values: z.infer<typeof formSchema>) => {
+    execute(values);
+  };
+
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2 p-6 border-2
-       border-neutral-800 rounded-md bg-neutral-500/50 backdrop-blur-[6px] w-[50%]">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-2 p-6 border-2
+       border-neutral-800 rounded-md bg-neutral-500/50 backdrop-blur-[6px] w-[500px]"
+      >
         <FormField
           control={form.control}
           defaultValue=""
@@ -54,7 +71,7 @@ export const ContactForm = () => {
               <FormControl>
                 <Input placeholder="name" {...field} />
               </FormControl>
-              <FormMessage className="ml-8"/>
+              <FormMessage className="ml-8" />
             </FormItem>
           )}
         />
@@ -68,7 +85,7 @@ export const ContactForm = () => {
               <FormControl>
                 <Input placeholder="Email" {...field} />
               </FormControl>
-              <FormMessage className="ml-8"/>
+              <FormMessage className="ml-8" />
             </FormItem>
           )}
         />
@@ -80,9 +97,13 @@ export const ContactForm = () => {
             <FormItem>
               <FormLabel>Phone Number</FormLabel>
               <FormControl>
-                <PhoneInput placeholder="phone number(optional)" {...field} className="bg-slate-200 p-2" />
+                <PhoneInput
+                  placeholder="phone number(optional)"
+                  {...field}
+                  className="phoneNumber "
+                />
               </FormControl>
-              <FormMessage className="ml-8"/>
+              <FormMessage className="ml-8" />
             </FormItem>
           )}
         />
@@ -94,9 +115,9 @@ export const ContactForm = () => {
             <FormItem>
               <FormLabel>Message</FormLabel>
               <FormControl>
-                <Textarea placeholder="Your message" {...field}/>
+                <Textarea placeholder="Your message" {...field} />
               </FormControl>
-              <FormMessage className="ml-8"/>
+              <FormMessage className="ml-8" />
             </FormItem>
           )}
         />
