@@ -1,7 +1,7 @@
 "use client";
 
 import { Navbar } from "@/components/navbar";
-import { AboutMe } from "@/components/sections/about-me";
+import { AboutMe } from "@/components/sections/about/about-me";
 import { ContactMe } from "@/components/sections/contact-me";
 import { Home } from "@/components/sections/home";
 import { Projects } from "@/components/sections/projects";
