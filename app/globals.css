@@ -21,8 +21,8 @@ body,
   gap: 18px;
 }
 
-.phoneNumber .PhoneInputCountrySelectArrow{
-
+.phoneNumber.dark {
+  background-color: black
 }
 
 .phoneNumber .PhoneInputCountry {

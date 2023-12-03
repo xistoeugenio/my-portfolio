@@ -22,7 +22,7 @@ export default function Page() {
         }}
       >
         <Home />
-        <div className="bg-slate-300 dark:bg-slate-800 h-[200%]">
+        <div className="bg-slate-300 dark:bg-[#141214] h-[200%]">
           <AboutMe />
           <Projects />
         </div>

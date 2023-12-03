@@ -19,6 +19,8 @@ import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { useAction } from "@/hooks/use-action";
 import { createdMessage } from "@/actions/create-message";
+import { useTheme } from "next-themes";
+import { cn } from "@/lib/utils";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -53,6 +55,10 @@ export const ContactForm = () => {
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     execute(values);
   };
+
+  const { systemTheme, theme, setTheme } = useTheme();
+
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
     <Form {...form}>
@@ -100,7 +106,9 @@ export const ContactForm = () => {
                 <PhoneInput
                   placeholder="phone number(optional)"
                   {...field}
-                  className="phoneNumber "
+                  className={cn(
+                    "phoneNumber"
+                  )}
                 />
               </FormControl>
               <FormMessage className="ml-8" />
