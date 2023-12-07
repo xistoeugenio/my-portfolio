@@ -1,14 +1,15 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
+import { BackgroundShadow } from "./hero/background-shadow";
 
 export const Home = () => {
   return (
     <div
       id="home"
-      className="w-full h-full bg-white flex items-end justify-center"
+      className="w-full h-full bg-white flex items-end justify-center overflow-hidden"
     >
-      <div className="w-full flex border-x-2 pt-10 max-w-[1100px] h-[calc(100%-80px)]">
-        <div className=" w-[45%] flex flex-col justify-around">
+      <div className="w-full flex items-end border-x-2 pt-10 max-w-[1100px] h-[calc(100%-80px)] relative">
+        <div className=" w-[45%] flex flex-col justify-around z-10">
           <h1 className="text-[55px] font-bold leading-tight mb-10">
             Lets Work together to Create Wonders with Us
           </h1>
@@ -42,15 +43,7 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1 flex items-center justify-center relative">
-          <div className="w-[200px] h-[200px] rounded-full shadow-[0_0_90px_250px_#BDD3FA]">
-          </div>
-          <div className=" w-[90%] h-full absolute ">
-            <div className="h-full w-full relative">
-              <Image src="/man.png" alt="man image" fill className="" />
-            </div>
-          </div>
-        </div>
+        <BackgroundShadow/>
       </div>
     </div>
   );

@@ -27,7 +27,7 @@ export const AboutMe = () => {
                 Buildinng systems not just for now but, that scale and adapt.
               </p>
             </div>
-            <div className="h-48 pl-6 flex gap-6 mb-44 overflow-x-scroll">
+            <div className="h-48 pl-6 flex gap-6 mb-44 overflow-x-scroll relative">
               <Card name="Next.js" darkImage={darkNextjs} image={nextjs} />
               <Card name="Node.js" darkImage={darkNodejs} image={nodejs} />
               <Card name="Prisma" darkImage={darkPrisma} image={prisma} />
@@ -38,8 +38,10 @@ export const AboutMe = () => {
           </div>
           <div className="flex-1 h-full flex flex-col gap-6">
             <AccordionContainer />
-            <div className="bg-white dark:bg-[#1D1C1D] flex-1 rounded-[20px]">
-              other{" "}
+            <div className="bg-white dark:bg-[#1D1C1D] flex-1 gap-2 rounded-[20px] relative overflow-hidden">
+              <div className="absolute border-2 rotate-45 flex gap-10 overflow-hidden">
+                <div className="border-2 w-52 h-52 rotate-45" />
+              </div>
             </div>
           </div>
         </div>
