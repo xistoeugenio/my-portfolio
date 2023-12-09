@@ -3,8 +3,8 @@ import { Link } from "react-scroll";
 
 export const Navbar = () => {
   return (
-    <div className="fixed z-30  w-full h-[80px] flex items-center justify-center dark:bg-slate-300/30 backdrop-blur-[10px] ">
-      <div className="w-full max-w-[1100px] flex justify-between items-center">
+    <div className="fixed z-30 w-full h-[12%] min-h-[80px] flex items-center justify-center bg-white dark:bg-slate-300/30 backdrop-blur-[10px] ">
+      <div className="w-full max-w-[1280px] mx-9 flex justify-between items-center">
         <span className=" dark:text-blue-950 font-semibold">Xisto.</span>
         <div className="flex gap-12">
           <Link

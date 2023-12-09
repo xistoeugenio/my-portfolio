@@ -13,10 +13,10 @@ export const SkillContainer = ({
 }: SkillContainerProps) => {
   return (
     <div className={cn(" absolute z-20 ", className)}>
-      <div className="w-11 h-11 bg-[#6EF3D4] flex items-center justify-center rounded-full absolute -left-4 -top-4   ">
-        <Icon className="w-10 h-10 p-[8px]" />
+      <div className="w-8 lg:w-11 h-8 lg:h-11 bg-[#6EF3D4] flex items-center justify-center rounded-full absolute -left-3 lg:-left-4 -top-3 lg:-top-4   ">
+        <Icon className="w-10 h-10 p-[6px] lg:p-[8px]" />
       </div>
-      <p className="bg-white font-semibold text-sm px-8 py-4 rounded-full">
+      <p className="bg-white font-semibold text-sm px-6 lg:px-8 py-2 lg:py-4 rounded-full">
         {text}
       </p>
     </div>
