@@ -12,12 +12,12 @@ export const AboutMe = () => {
   return (
     <div
       id="about"
-      className="w-full h-screen flex  items-center justify-center "
+      className="w-full h-auto flex  items-center justify-center "
     >
-      <div className="w-full max-w-[1100px] h-screen flex flex-col items-start justify-center gap-4">
+      <div className="w-full max-w-[1100px] h-full flex flex-col items-start justify-center gap-4  ">
         <h3>How I can help you</h3>
-        <div className="w-full h-[70%] flex gap-6 items-center justify-center ">
-          <div className="w-[60%] h-full bg-white dark:bg-[#1D1C1D] py-6 flex flex-col justify-between rounded-[20px]">
+        <div className="w-full h-auto flex gap-6 items-center justify-center aspect-[3/2]">
+          <div className="w-[55%] h-full bg-white dark:bg-[#1D1C1D] py-6 flex flex-col justify-between rounded-[20px]">
             <div className="px-14">
               <h3 className="text-[19px] mb-2 text-2xl">
                 Design that{" "}
@@ -39,9 +39,7 @@ export const AboutMe = () => {
           <div className="flex-1 h-full flex flex-col gap-6">
             <AccordionContainer />
             <div className="bg-white dark:bg-[#1D1C1D] flex-1 gap-2 rounded-[20px] relative overflow-hidden">
-              <div className="absolute border-2 rotate-45 flex gap-10 overflow-hidden">
-                <div className="border-2 w-52 h-52 rotate-45" />
-              </div>
+              
             </div>
           </div>
         </div>
