@@ -1,60 +1,62 @@
+import { cn } from "@/lib/utils";
 import { ModeToggle } from "./mode-toggle";
 import { Link } from "react-scroll";
+import { useScrollTop } from "@/hooks/use-scroll-top";
 
-export const Navbar = () => {
+interface navbarProps {
+  scrolled: boolean;
+}
+
+const links = [
+  {
+    id: 1,
+    link: "home",
+    name: "Home",
+  },
+  {
+    id: 2,
+    link: "about",
+    name: "About",
+  },
+  {
+    id: 3,
+    link: "projects",
+    name: "Projects",
+  },
+  {
+    id: 4,
+    link: "contact",
+    name: "Contact Me",
+  },
+];
+
+export const Navbar = ({}: navbarProps) => {
+  const scrolled = useScrollTop(10, "containerElement");
   return (
-    <div className="fixed z-30 w-full h-[12%] min-h-[80px] flex items-center justify-center bg-white dark:bg-slate-300/30 backdrop-blur-[10px] ">
+    <div
+      className={cn(
+        "fixed z-30 w-full h-[12%] min-h-[80px] flex items-center justify-center  dark:bg-slate-300/30 transition ease-in-out delay-15 box-content",
+        scrolled && "bg-white border-b shadow-md"
+      )}
+    >
       <div className="w-full max-w-[1280px] mx-9 flex justify-between items-center">
         <span className=" dark:text-blue-950 font-semibold">Xisto.</span>
         <div className="flex gap-12">
-          <Link
-            className="p-2 rounded-md"
-            activeClass="bg-neutral-200"
-            to="home"
-            spy={true}
-            smooth={true}
-            duration={500}
-            containerId="containerElement"
-            scrolling="100px"
-          >
-            Home
-          </Link>
-
-          <Link
-            className="p-2 rounded-md"
-            activeClass="bg-neutral-200"
-            to="about"
-            spy={true}
-            smooth={true}
-            duration={500}
-            containerId="containerElement"
-          >
-            About
-          </Link>
-
-          <Link
-            className="p-2 rounded-md"
-            activeClass="bg-neutral-200"
-            to="projects"
-            spy={true}
-            smooth={true}
-            duration={500}
-            containerId="containerElement"
-          >
-            Projects
-          </Link>
-
-          <Link
-            className="p-2 rounded-md"
-            activeClass="bg-neutral-200"
-            to="contact"
-            spy={true}
-            smooth={true}
-            duration={500}
-            containerId="containerElement"
-          >
-            Contact Me
-          </Link>
+          {links.map((item) => (
+            <Link
+              key={item.id}
+              className="p-2 rounded-md hover:bg-neutral-100 cursor-pointer"
+              activeClass="bg-neutral-200"
+              to={item.link}
+              spy={true}
+              smooth={true}
+              duration={600}
+              containerId="containerElement"
+              scrolling="100px"
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
         <ModeToggle />
       </div>
