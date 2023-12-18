@@ -7,40 +7,21 @@ import darkNodejs from "@/public/dark-nodejs.png";
 import nodejs from "@/public/nodejs.png";
 import darkPrisma from "@/public/dark-prisma.png";
 import prisma from "@/public/prisma.png";
+import { ShowcasingProficiencies } from "./components/showcasing-proficiencies";
 
 export const AboutMe = () => {
   return (
     <div
       id="about"
-      className="w-full h-auto flex  items-center justify-center "
+      className="w-full h-auto flex  items-center justify-center px-10"
     >
-      <div className="w-full max-w-[1100px] h-full flex flex-col items-start justify-center gap-4  ">
+      <div className="w-full max-w-[1280px] h-full flex flex-col items-start justify-center gap-4 mt-[12vh] pb-10 border-b-4 border-neutral-600  px-10">
         <h3>How I can help you</h3>
         <div className="w-full h-auto flex gap-6 items-center justify-center aspect-[3/2]">
-          <div className="w-[55%] h-full bg-white dark:bg-[#1D1C1D] py-6 flex flex-col justify-between rounded-[20px]">
-            <div className="px-14">
-              <h3 className="text-[19px] mb-2 text-2xl">
-                Design that{" "}
-                <span className="text-[#8689DA] dark:text-red-500">scales</span>
-              </h3>
-              <p className="text-neutral-400 text-[15px]">
-                Buildinng systems not just for now but, that scale and adapt.
-              </p>
-            </div>
-            <div className="h-48 pl-6 flex gap-6 mb-44 overflow-x-scroll relative">
-              <Card name="Next.js" darkImage={darkNextjs} image={nextjs} />
-              <Card name="Node.js" darkImage={darkNodejs} image={nodejs} />
-              <Card name="Prisma" darkImage={darkPrisma} image={prisma} />
-              <Card name="Next.js" darkImage={darkNextjs} image={nextjs} />
-              <Card name="Node.js" darkImage={darkNodejs} image={nodejs} />
-              <Card name="Prisma" darkImage={darkPrisma} image={prisma} />
-            </div>
-          </div>
+          <ShowcasingProficiencies/>
           <div className="flex-1 h-full flex flex-col gap-6">
             <AccordionContainer />
-            <div className="bg-white dark:bg-[#1D1C1D] flex-1 gap-2 rounded-[20px] relative overflow-hidden">
-              
-            </div>
+            <div className="bg-white dark:bg-[#1D1C1D] flex-1 gap-2 rounded-[20px] relative overflow-hidden"></div>
           </div>
         </div>
       </div>

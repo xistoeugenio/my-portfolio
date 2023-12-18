@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 export const Projects = () => {
   return (
     <div
-      className="w-full h-screen border-t-2 border-white flex flex-col items-center gap-10 justify-center"
+      className="w-full h-screen flex flex-col items-center gap-10 justify-center"
       id="projects"
     >
       <div className="w-[700px] h-[30%] flex items-center justify-center bg-white rounded-[20px] text-black">

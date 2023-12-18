@@ -24,7 +24,7 @@ export default function Page() {
         }}
       >
         <Home />
-        <div className="bg-slate-300 dark:bg-[#141214] h-[200%] shadow-[0_0_4px_2px_#Cbd5e1] relative z-20">
+        <div className="bg-slate-300 dark:bg-[#141214] h-auto shadow-[0_0_4px_2px_#Cbd5e1] relative z-20">
           <AboutMe />
           <Projects />
         </div>
