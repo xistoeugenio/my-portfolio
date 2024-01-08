@@ -35,12 +35,12 @@ export const Navbar = ({}: navbarProps) => {
   return (
     <div
       className={cn(
-        "fixed z-30 w-full h-[12%] min-h-[80px] flex items-center justify-center  dark:bg-slate-300/30 transition ease-in-out delay-15 box-content",
-        scrolled && "bg-white border-b shadow-md"
+        "fixed z-30 w-full h-[12%] min-h-[80px] flex items-center justify-center  dark:bg-slate-300/30 transition-all ease-in-out delay-100 box-content",
+        scrolled && "bg-white border-b shadow-md xl:h-[10%]"
       )}
     >
-      <div className="w-full max-w-[1280px] mx-9 flex justify-between items-center">
-        <span className=" dark:text-blue-950 font-semibold">Xisto.</span>
+      <div className="w-full max-w-[1280px] mx-9 flex justify-between items-center ">
+        <span className=" dark:text-blue-950 font-semibold xl:text-xl cursor-pointer">Xisto.</span>
         <div className="flex gap-12">
           {links.map((item) => (
             <Link

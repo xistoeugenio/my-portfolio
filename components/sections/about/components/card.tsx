@@ -8,7 +8,7 @@ interface CardProps {
 
 export const Card = ({ name, darkImage, image }: CardProps) => {
   return (
-    <div className="w-36 min-w-[144px] h-full bg-neutral-200 dark:bg-[#201F20] border-neutral-300 dark:border-neutral-700 flex flex-col items-center rounded-xl border-2">
+    <div className="w-40 min-w-[160px] h-full bg-neutral-200 dark:bg-[#201F20] border-neutral-300 dark:border-neutral-700 flex flex-col items-center gap-3 rounded-xl border-2">
       <div className=" flex-1 flex items-center justify-center px-3">
         <Image
           className="block dark:hidden"

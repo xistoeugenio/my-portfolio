@@ -29,26 +29,26 @@ export const AccordionContainer = () => {
     },
   ];
   return (
-    <div className="bg-white dark:bg-[#1D1C1D] flex-1 rounded-[20px] p-6">
+    <div className=" flex-1 rounded-[20px] p-6 mt-16">
       <div className="h-auto mb-8">
-        <h3 className="text-[19px] mb-2 text-2xl">
+        <h3 className="text-[24px] mb-8 text-2xl">
           The Art and Logic of{" "}
           <span className="text-[#8689DA] dark:text-red-500 font-[600]">
             Web Development
           </span>{" "}
         </h3>
-        <p className="text-neutral-400 text-[15px] font-medium">
+        <p className="text-neutral-400 text-[16px] font-medium">
           Discover What Sets Me Apart and Drives My Web Development Passion.
         </p>
       </div>
       <Accordion
         type="single"
         collapsible
-        className="w-full h-auto flex flex-col gap-6 relative"
+        className="w-full h-auto flex flex-col gap-10 relative"
       >
         <div className="w-[3px] h-full left-[5px] bg-neutral-300 dark:bg-neutral-700 absolute rounded-sm" />
         {AcordionContent.map((item) => (
-          <div key={item.id} className="flex gap-8 z-50">
+          <div key={item.id} className="flex gap-8 z-10">
             <div
               className={cn(
                 "w-[13px] h-[13px] bg-neutral-600 dark:bg-neutral-300 flex items-center justify-center rounded-full shadow-[0_0_0px_5px_white] dark:shadow-[0_0_0px_5px_#1D1C1D]",
@@ -63,10 +63,10 @@ export const AccordionContainer = () => {
               value={item.id}
               className="bg-white dark:bg-[#1D1C1D] flex-1 rounded-2xl border-2"
             >
-              <AccordionTrigger className="p-2 text-base dark:text-neutral-300">
+              <AccordionTrigger className="py-2 px-4 text-[18px] dark:text-neutral-300">
                 {item.title}
               </AccordionTrigger>
-              <AccordionContent className="text-neutral-700 dark:text-neutral-400 p-2">
+              <AccordionContent className="text-neutral-700 dark:text-neutral-400 text-[16px] leading-normal p-2">
                 {item.content}
               </AccordionContent>
             </AccordionItem>
